@@ -1,3 +1,23 @@
 body{
 	background-color: red;
 }
+
+.content {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+
+.content-left, .content-right{
+	margin: 0 10px;
+}
+
+.content-left {
+	background-color: blue;
+	flex-grow: 2;
+}
+
+.content-right {
+	background-color: green;
+	flex-grow: 1;
+}

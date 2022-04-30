@@ -4,9 +4,9 @@ import RightColumn from './RightColumn'
 
 const Content = () => {
 	return (
-		<div>
+		<div className="content">
 			<LeftColumn />
-			<RightColumn />
+			<RightColumn  />
 		</div>
 	)
 }

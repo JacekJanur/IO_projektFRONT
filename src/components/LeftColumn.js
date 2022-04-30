@@ -2,7 +2,7 @@ import React from 'react'
 
 const LeftColumn = () => {
 	return (
-		<div>
+		<div className="content-left">
 			LeftColumn
 		</div>
 	)

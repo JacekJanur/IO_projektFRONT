@@ -2,7 +2,7 @@ import React from 'react'
 
 const RightColumn = () => {
 	return (
-		<div>
+		<div className="content-right">
 			RightColumn
 		</div>
 	)
