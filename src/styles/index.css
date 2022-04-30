@@ -2,6 +2,26 @@ body{
 	background-color: red;
 }
 
+nav{
+	background-color: black;
+	display: flex;
+	justify-content: flex-end;
+}
+
+nav a{
+	margin: 10px 15px;
+	color: #f6f4e6;
+	text-decoration: none;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	-webkit-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+nav a:hover {
+  color: #fddb3a;
+}
+
 .content {
 	display: flex;
 	justify-content: center;

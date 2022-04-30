@@ -3,7 +3,8 @@ import React from 'react'
 const Navbar = () => {
 	return (
 		<nav>
-			Navbar
+     		<a href="#">Login</a>
+    		<a href="#">Register</a>
 		</nav>
 	)
 }
