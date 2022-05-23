@@ -4,7 +4,8 @@ import './styles/normalize.css';
 import './styles/index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Login from "./routes/login";
+import LoginRoute from "./routes/LoginRoute";
+import RegisterRoute from "./routes/RegisterRoute";
 
 
 import {
@@ -18,8 +19,8 @@ root.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<App />} />
-      <Route path="login" element={<Login />} />
-      <Route path="register" element={<Login />} />
+      <Route path="login" element={<LoginRoute />} />
+      <Route path="register" element={<RegisterRoute />} />
     </Routes>
   </BrowserRouter>
 );
