@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 import Navbar from './components/Nav/Navbar';
 import Content from './components/Content';
 import Footer from './components/Footer';
-import Profile from "./Pages/Logowanie";
-import About from "./Pages/Rejestracja";
+
 
 
 

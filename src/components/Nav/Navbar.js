@@ -12,7 +12,7 @@ const Navbar = () => {
        
        <search>
           
-           <input type="text" name="searchBar" id="searchBar" placeholder="what game you want to find"/>
+        <input type="text" name="searchBar" id="searchBar" placeholder="what game you want to find"/>
        </search>
         <navmenu>
         <ul>
