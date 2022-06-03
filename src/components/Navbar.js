@@ -8,13 +8,13 @@ const Navbar = () => {
 		<nav>
         
         {/* <Link to="/">Home</Link> |{" "} */}
-       <image>'</image>
+       <div className="image">'</div>
        
-       <search>
+       <div className="search">
           
         <input type="text" name="searchBar" id="searchBar" placeholder="what game you want to find"/>
-       </search>
-        <navmenu>
+       </div>
+        <div class="navmenu">
         <ul>
 
             <li><Link to="">Games</Link>
@@ -28,7 +28,7 @@ const Navbar = () => {
             </ul>
             </li>
         </ul>
-        </navmenu>
+        </div>
         
         <Link to="/login">Login</Link>
         <Link to="/register">Sign Up</Link>

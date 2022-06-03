@@ -4,25 +4,25 @@ const Game = () => {
 	return (
 		<div className="game">
 			
-			<div class="flexbox-item flexbox-item-1">
+			<div className="flexbox-item flexbox-item-1">
 				<h4>Most Recent Games:</h4>
 			</div>
-			<div class="flexbox-item flexbox-item-2"><image2></image2>
-			<div class="tekst"><div class="t">RPG</div>
-			<div class="t2">Assassin Creed Odyssey</div>
-			<div class="star">★ ★ ★ ★ ★  <b id="ocena">5.0</b></div>
+			<div className="flexbox-item flexbox-item-2"><div className="image2"></div>
+			<div className="tekst"><div className="t">RPG</div>
+			<div className="t2">Assassin Creed Odyssey</div>
+			<div className="star">★ ★ ★ ★ ★  <b id="ocena">5.0</b></div>
 			</div>
 			</div>
 			
-			<div class="flexbox-item flexbox-item-3">
-			<image3></image3><div class="tekst"><div class="t">FPS</div>
-			<div class="t2">DOOM</div> 
-			<div class="star">★ ★ ★ ★ ☆  <b id="ocena">4.0</b></div>
+			<div className="flexbox-item flexbox-item-3">
+			<div className="image3"></div><div className="tekst"><div className="t">FPS</div>
+			<div className="t2">DOOM</div> 
+			<div className="star">★ ★ ★ ★ ☆  <b id="ocena">4.0</b></div>
 			</div>
 			</div>
 			
-			<div class="axis main-axis"></div>
-			<div class="axis cross-axis"></div>
+			<div className="axis main-axis"></div>
+			<div className="axis cross-axis"></div>
 			
 		</div>
 	)

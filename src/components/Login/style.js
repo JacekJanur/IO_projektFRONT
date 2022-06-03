@@ -1,5 +1,15 @@
 import styled from 'styled-components'
 
+
+export const Content = styled.div`
+  background-color:darkwhite;
+  height:86.5vh;
+  margin-top:-90px;
+
+
+
+`
+
 export const BackgroundDiv = styled.div`
   border: 1px solid black;
   width: 30%;
@@ -48,7 +58,7 @@ export const Text = styled.p`
 export const Heading = styled.h1`
   text-align: center;
   font-size: 8rem;
-  color: white;
+  color: black;
   font-family: 'Bangers', cursive; 
   padding: 0.3rem;   
 `

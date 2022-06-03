@@ -1,8 +1,10 @@
 import React from 'react'
-import { BackgroundDiv, Form, Box, Btn, Text, Heading, Error } from "./style"
+import { Content,BackgroundDiv, Form, Box, Btn, Text, Heading, Error } from "./style"
 const LoginForm = () => {
 	return (
+        
 		<>
+                <Content>
                 <Heading>Login</Heading>
                <BackgroundDiv>
                    <Form>
@@ -13,7 +15,10 @@ const LoginForm = () => {
                         <Btn type="submit">Login</Btn>
                    </Form>
                </BackgroundDiv>
-        </>      
+               </Content>
+               
+        </> 
+          
 	)
 }
 /* email haslo */

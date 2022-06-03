@@ -1,5 +1,11 @@
 import styled from 'styled-components'
+export const Body = styled.button`
 
+width:100%;
+height:90vh;
+
+
+`
 export const BackgroundDiv = styled.div`
   border: 1px solid black;
   width: 30%;
@@ -15,12 +21,13 @@ export const Form = styled.form`
 `
 
 export const Box = styled.input`
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
+  width: 60%;
+  padding: 20px 40px;
+  margin: 30px 0;
   box-sizing: border-box;
   border: 3px solid #555;
   background-color: #d1d1d1;
+  float:left;
 `
 
 export const Btn = styled.button`
