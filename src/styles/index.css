@@ -76,6 +76,11 @@ footer{
 	justify-content: flex-end;
 	height:8vh;
 	background-color:  teal;
+	position:absolute;
+	bottom:0;
+	width:100%;
+	height:60px;		/* Wysokość stopki */
+		
 	
 }
 .navmenu {
@@ -222,7 +227,7 @@ h4{
 	width:30%;
 	height:3vh;
 	text-align:center;
-	
+	font-family:"Comic Sans MS",cursive;
 	font-size:1.3vh;
 	margin-top:3vh;
 }
@@ -232,7 +237,7 @@ h4{
 	text-align:center;
 	color:white;
 	font-size:2vh;
-	
+	font-family:"Comic Sans MS",cursive;
 
 }
 .star{
@@ -268,8 +273,59 @@ ul li a:hover{
 	color:rgba(0, 0, 0, 0.404);
 }
 .fot{
+	
 	width:100%;
 	margin-top:40px;
 	text-align:center;
 	color:white;
+	position:absolute;
+	bottom:0;
+	width:100%;
+	height:60px;		/* Wysokość stopki */
+		
+
+
+}
+
+.image4{
+	content:url('../components/image/doom.jpg');
+	position:absolute;
+	top:31.5%;
+	left:50%;
+	height:50%;
+	transform:translate(-50%,-50%);
+	width:70%;
+	
+}
+.desc{
+	position:absolute;
+	width:70%;
+	background-color:rgba(0, 0, 0, .5);
+	transform:translate(-50%,-50%);
+	left:50%;
+	height:10%;
+	top:51.5%;
+}
+.o{
+	color:white;
+	width:20%;
+	margin-left:20px;
+	font-size:2vh;
+	margin-top:20px;
+	text-align:center;
+	font-family:"Comic Sans MS",cursive;
+}
+.descryption{
+	position:absolute;
+	width:60%;
+	transform:translate(-50%,-50%);
+	left:50%;
+	height:20%;
+	top:66.5%;
+	text-align:center;
+	font-family:"Comic Sans MS",cursive;
+	
+}
+.d2{
+	margin:30px;
 }

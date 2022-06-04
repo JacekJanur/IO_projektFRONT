@@ -3,8 +3,8 @@ import styled from 'styled-components'
 
 export const Content = styled.div`
   background-color:darkwhite;
-  height:86.5vh;
-  margin-top:-90px;
+  height:75.5vh;
+  margin-top:-190px;
 
 
 
@@ -15,14 +15,17 @@ export const BackgroundDiv = styled.div`
   width: 30%;
   text-align: center;
   display: block;
-  margin: auto;
+  margin-top:300px;
+  
   height: 30rem;
   background-color: white;
   margin-bottom:5vh;
+  
 `
 
 export const Form = styled.form`
   padding: 40px;
+  
 `
 
 export const Box = styled.input`
@@ -32,6 +35,7 @@ export const Box = styled.input`
   box-sizing: border-box;
   border: 3px solid #555;
   background-color: #d1d1d1;
+  
 `
 
 export const Btn = styled.button`

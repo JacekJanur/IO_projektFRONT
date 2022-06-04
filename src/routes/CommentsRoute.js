@@ -1,14 +1,15 @@
 import React from 'react'
 import Navbar from '../components/Login/NavLogin';
 import Footer from '../components/Footer';
-import LoginForm from '../components/Login/LoginForm';
+import CommentForm from '../components/Comments';
+
 
 
 const CommentsRoute = () => {
 	return (
 	<div>
 	    <Navbar/>
-	    <LoginForm />
+	    <CommentForm />
 	    <Footer/>
     </div>
 	)

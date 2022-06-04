@@ -2,78 +2,52 @@ import React from 'react'
 import { BackgroundDiv, Form,Body, Box, Btn, Text, Heading, Error } from "./style"
 import { useState } from 'react';
 import "./reg.css";
-import Axios from 'axios';
 
 
 
 
-function RegisterRoute () {
+
+
    
-  const url="https://jacekjanurbackend.azurewebsites.net/users/register";
-  const [data,setData] = useState({
-    name:"",
-    email:"",
-    password:""
-  })
-
+  const RegisterRoute= () =>{
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    
+    const [message, setMessage] = useState(false);
   
-  function submit(e){
+  const handleSubmit = (e) =>{
     e.preventDefault();
-    const data2 = {
-      name: data.name,
-      email: data.email,
-      password:data.password,
-    }
-    console.log(data2);
-    Axios.post(url,{data2})
-    .then(res=>{
-      console.log(res.data)
+    const dane = {name, email, password};
+    setMessage(true);
+    fetch('https://jacekjanurbackend.azurewebsites.net/users/register',{
+      method:'POST',
+      headers:{"Content-Type":"application/json"},
+      body:JSON.stringify(dane)
+    }).then(() => {
+      console.log('new user added');
+      setMessage(false);
     })
-
-    }
+  }
   
- function handle(e){
-   const newdata={...data}
-   newdata[e.target.id]=e.target.value
-   setData(newdata)
-   console.log(newdata)
 
- }
+
   
       
   return (
-    <Body>
-      <BackgroundDiv>
-        <Text>Registration</Text>
-          <Form onSubmit={(e)=>submit(e)}>
-            <input
-          
-          type="text"
-          id="name"
-          value={data.name}
-          placeholder="Name"
-          onChange={(e) => handle(e)}
-        />
-        <input
-          type="email"
-          id="email"
-          value={data.email}
-          placeholder="Email"
-          onChange={(e) => handle(e)}
-        />
-        <input
-          type="password"
-          id="password"
-          value={data.password}
-          placeholder="Password"
-          onChange={(e) => handle(e)}
-        />
+    <BackgroundDiv>
+      <h2>Add user</h2>
+      <form onSubmit={handleSubmit}>
         
-        <button>Create</button>
-      </Form>
-      </BackgroundDiv>
-      </Body>
-        );
-      }
+        <Box type="text" required value={name} onChange={(e)=>setName(e.target.value)}/>
+        <Box type="email" required value={email} onChange={(e)=>setEmail(e.target.value)}/>
+        <Box type="password" required value={password} onChange={(e)=>setPassword(e.target.value)}/>
+        
+        {!message &&<Btn>Add</Btn>}
+        {message &&<Btn disabled>Add</Btn>}
+      </form>
+    </BackgroundDiv>
+  );
+}
 /* username email haslo pow haslo */
 export default RegisterRoute

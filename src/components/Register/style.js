@@ -14,20 +14,27 @@ export const BackgroundDiv = styled.div`
   margin: auto;
   height: 39rem;
   background-color: white;
+  
 `
 
 export const Form = styled.form`
+  
   padding: 20px;
+  
 `
 
 export const Box = styled.input`
-  width: 60%;
-  padding: 20px 40px;
-  margin: 30px 0;
-  box-sizing: border-box;
-  border: 3px solid #555;
-  background-color: #d1d1d1;
-  float:left;
+  display: block;
+  width: 20rem;
+  height: 2rem;
+  padding: 0.5rem;
+  font-size: 1.1em;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  textAlignVertical:center;
+  margin-left:115px;
+ 
+  
 `
 
 export const Btn = styled.button`
@@ -47,7 +54,7 @@ export const Btn = styled.button`
 `
 
 export const Text = styled.p`
-  font-size: 2rem;
+  font-size: 3rem;
   color: black;
 `
 

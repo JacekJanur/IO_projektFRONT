@@ -22,7 +22,7 @@ root.render(
       <Route path="/" element={<App />} />
       <Route path="login" element={<LoginRoute />} />
       <Route path="register" element={<RegisterRoute />} />
-      <Route path="comment" element={<CommentsRoute/>}/>
+      <Route path="comments" element={<CommentsRoute/>}/>
     </Routes>
   </BrowserRouter>
 );
