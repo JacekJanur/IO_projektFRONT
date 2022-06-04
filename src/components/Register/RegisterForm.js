@@ -2,7 +2,7 @@ import React from 'react'
 import { BackgroundDiv, Form,Body, Box, Btn, Text, Heading, Error } from "./style"
 import { useState } from 'react';
 import "./reg.css";
-
+import axios from 'axios';
 
 
 
@@ -16,19 +16,16 @@ import "./reg.css";
     
     const [message, setMessage] = useState(false);
   
-  const handleSubmit = (e) =>{
+  const handleSubmit = async (e) =>{
     e.preventDefault();
-    const dane = {name, email, password};
-    setMessage(true);
-    fetch('https://jacekjanurbackend.azurewebsites.net/users/register',{
-      method:'POST',
-      headers:{"Content-Type":"application/json"},
-      body:JSON.stringify(dane)
-    }).then(() => {
-      console.log('new user added');
-      setMessage(false);
-    })
-  }
+    const response = await axios.post('https://jacekjanurbackend.azurewebsites.net/users/register', {"name":name, "password":password, "email":email},
+      {
+          headers: {
+            'Content-Type': 'multipart/form-data'
+          }
+      });
+       console.log("Response", response);
+    }
   
 
 
