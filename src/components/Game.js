@@ -12,7 +12,7 @@ const Game = ({games}) => {
 		<div className="game">
 			
 			<div className="flexbox-item flexbox-item-1">
-				<h4>Most Recent Games: </h4>
+				<h1>Most Recent Games: </h1>
 			</div>
 			<div className="flexbox-item flexbox-item-2"><div className="image2" style={{
 			    backgroundImage: `url(${href})`

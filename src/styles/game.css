@@ -1,0 +1,17 @@
+.flexbox-item{
+	width:80%;
+	margin:0;
+	
+	
+}
+h1{
+    
+    
+	height:10vw;
+	font-size:3vw;
+	width:100%;
+    background-color:red;
+    text-align:center;
+    justify-content: center;
+
+}
