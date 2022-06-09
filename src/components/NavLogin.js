@@ -3,10 +3,11 @@ import { Link } from "react-router-dom";
 import { useEffect } from 'react';
 import { useState } from 'react';
 
-
 const Navbar = () => {
+
     
-    const [log, setLog] = useState("");
+
+      const [log, setLog] = useState("");
     function getCookie(cname) {
         let name = cname + "=";
         let ca = document.cookie.split(';');
@@ -42,14 +43,13 @@ const Navbar = () => {
         checkCookie();
         console.log("do");
     }, [])
-    
-   
+
 	return (
         
 		<nav>
         
         {/* <Link to="/">Home</Link> |{" "} */}
-       
+       <div className="image">'</div>
        
        <div className="search">
           
@@ -70,19 +70,15 @@ const Navbar = () => {
             </li>
         </ul>
         </div>
-        <div className="logowanie">
+        
+        <Link to="/">Home</Link>
         {log===false &&<Link to="/login">Login</Link>}   
         {log===false &&<Link to="/register">Sign Up</Link> }
-        {log===true&&<button onClick={()=>{removeCookie("token")}}>Logout1</button>}
-        
-
+        {log===true&&<button onClick={()=>{removeCookie("token")}}>Logout</button>}
         
         
-        
-        </div>
         </nav>
 	)
-  
 }
 
 export default Navbar

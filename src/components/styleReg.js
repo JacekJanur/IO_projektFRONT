@@ -8,13 +8,14 @@ height:90vh;
 `
 export const BackgroundDiv = styled.div`
   border: 1px solid black;
-  width: 30%;
+  width: 30vw;
   text-align: center;
   display: block;
   margin: auto;
   height: 39rem;
   background-color: white;
-  
+  margin-top:100px;
+  margin-bottom:100px;
 `
 
 export const Form = styled.form`
@@ -25,7 +26,7 @@ export const Form = styled.form`
 
 export const Box = styled.input`
   display: block;
-  width: 20rem;
+  width: 15vw;
   height: 2rem;
   padding: 0.5rem;
   font-size: 1.1em;
@@ -33,6 +34,8 @@ export const Box = styled.input`
   margin-bottom: 2rem;
   textAlignVertical:center;
   margin-left:115px;
+  position:flex;
+  justify-content:center;
  
   
 `

@@ -1,7 +1,7 @@
 import React from 'react'
-import Navbar from '../components/Register/NavRegister';
+import Navbar from '../components/NavRegister';
 import Footer from '../components/Footer';
-import RegisterForm from '../components/Register/RegisterForm';
+import RegisterForm from '../components/RegisterForm';
 
 const RegisterRoute = () => {
 	return (
