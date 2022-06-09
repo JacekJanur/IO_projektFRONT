@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../components/Login/NavLogin';
+import Navbar from '../components/NavLogin';
 import Footer from '../components/Footer';
 import CommentForm from '../components/Comments';
 

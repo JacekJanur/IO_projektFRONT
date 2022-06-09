@@ -1,7 +1,7 @@
 import React from 'react'
-import Navbar from '../components/Login/NavLogin';
+import Navbar from '../components/NavLogin';
 import Footer from '../components/Footer';
-import LoginForm from '../components/Login/LoginForm';
+import LoginForm from '../components/LoginForm';
 
 const LoginRoute = () => {
 	return (
