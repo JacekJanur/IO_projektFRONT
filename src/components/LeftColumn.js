@@ -25,9 +25,11 @@ const LeftColumn = () => {
 			<div className="games-cont">
 		      {gamesDownloaded && games.map((item: any, index: any) => {
 			    return (
-			    	<div >
-						<Game games = {item}/>
-			    	</div>
+			    	<a href={"games/" + item.id}>
+				    	<div >
+							<Game games = {item}/>
+				    	</div>
+				    </a>
 			    )
 			})}
 			</div>

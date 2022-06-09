@@ -19,7 +19,7 @@ const Game = ({games}) => {
 			  }}></div>
 			<div className="tekst"><div className="t">
 					<div>
-						GATUNEK
+						{games.genre_name}
                     </div>
 					
 				</div>
