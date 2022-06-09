@@ -1,5 +1,5 @@
 import React from 'react'
-import Game from './Game.js'
+import GameBlock from './GameBlock.js'
 import { useState, useEffect } from 'react';
 
 const LeftColumn = () => {
@@ -27,7 +27,7 @@ const LeftColumn = () => {
 			    return (
 			    	<a href={"games/" + item.id}>
 				    	<div >
-							<Game games = {item}/>
+							<GameBlock games = {item}/>
 				    	</div>
 				    </a>
 			    )

@@ -7,7 +7,6 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import LoginRoute from "./routes/LoginRoute";
 import RegisterRoute from "./routes/RegisterRoute";
-import CommentsRoute from "./routes/CommentsRoute";
 import GameRoute from "./routes/GameRoute";
 
 
@@ -24,7 +23,6 @@ root.render(
       <Route path="/" element={<App />} />
       <Route path="login" element={<LoginRoute />} />
       <Route path="register" element={<RegisterRoute />} />
-      <Route path="comments" element={<CommentsRoute/>}/>
       <Route path="/games/:id" element={<GameRoute/>}/>
     </Routes>
   </BrowserRouter>
