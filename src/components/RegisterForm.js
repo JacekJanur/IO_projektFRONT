@@ -53,14 +53,14 @@ function getCookie(cname) {
          setCookie("token",response.data.token)
 
        }else{
-        setMessage("the given email is taken");
+        setMessage(response.data.message);
        }
       
     
 
        
     }catch (err) {
-      console.log(err);
+      setMessage(err.response.data.message);
     }
   }
   
