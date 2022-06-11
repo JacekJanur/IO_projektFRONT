@@ -56,18 +56,20 @@ const LoginForm = () => {
             }
     
         });
-         
+
         if(response.status == 200){
+          alert(response.data.token)
         setMessage("Login passed")
-        setCookie("token",response.data.token)
+        setCookie("token",response.token)
         window.location.href = '/';
-        }else{
-          setMessage("the given email is taken");
+        }
+        else{
+          setMessage(response.data.message);
          }
 
         
       }catch (err) {
-        console.log(err);
+        setMessage(err.response.data.message);
       } 
     
         };
@@ -85,7 +87,6 @@ const LoginForm = () => {
                     <Btn type="submit">Login</Btn>
                     <div className="message">{message ? <p>{message}</p> : null}</div>
 
-                    
                 </Form>
             </div>
             
