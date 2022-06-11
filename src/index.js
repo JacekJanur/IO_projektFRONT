@@ -23,7 +23,7 @@ root.render(
       <Route path="/" element={<App />} />
       <Route path="login" element={<LoginRoute />} />
       <Route path="register" element={<RegisterRoute />} />
-      <Route path="/games/:id" element={<GameRoute/>}/>
+      <Route path="games/:id" element={<GameRoute/>}/>
     </Routes>
   </BrowserRouter>
 );
