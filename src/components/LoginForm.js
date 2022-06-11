@@ -61,9 +61,8 @@ const LoginForm = () => {
         });
 
         if(response.status == 200){
-        
         setMessage("Login passed")
-        setCookie("token",response.token)
+        setCookie("token",response.data.token)
         window.location.href = '/';
         }else{
           setMessage(response.message);

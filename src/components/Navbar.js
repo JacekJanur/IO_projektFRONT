@@ -61,7 +61,7 @@ const Navbar = () => {
 	   <nav>
            <div className="search">
                     <input type="text" name="searchBar" id="searchBar" required value={str} onChange={(e)=>setStr(e.target.value)}/>
-                    <button type="button" onClick={handleSubmit}>Search</button>
+                    <button type="button" className="sButton" onClick={handleSubmit}>Search</button>
            </div>
             
             <div className="logowanie">
