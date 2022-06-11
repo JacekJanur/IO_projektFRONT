@@ -27,7 +27,7 @@ const Navbar = () => {
 
     function checkCookie() {
         let user = getCookie("token");
-        if (user != "") {
+        if (user != null) {
             setLog(true);
         } else 
         {
@@ -41,10 +41,8 @@ const Navbar = () => {
         window.location.href="/";
       }
   
-      useEffect(()=>{
+    useEffect(()=>{
         checkCookie();
-        
-        
         
     }, [])
     

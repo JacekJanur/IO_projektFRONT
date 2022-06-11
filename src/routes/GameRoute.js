@@ -29,13 +29,12 @@ const GameRoute = () => {
 
 	return (
 		<div className="grid-container3">
-			
 	      <Navbar/>
 	      {gameDownloaded && (
 	        <OneGame game = {game}/>
 	      )}
 	      {noGame && (
-	        <div className="no-game">No game found</div>
+	        <div data-testid="nogame" className="no-game">No game found</div>
 	      )}
 	    </div>
 	)

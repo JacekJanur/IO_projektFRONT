@@ -24,9 +24,10 @@ const LeftColumn = () => {
 		
 			<div>
 			<h1>Most recent games:</h1>
+			{gamesDownloaded && <div data-testid="gameblock"></div>}
 		      {gamesDownloaded && games.map((item: any, index: any) => {
 			    return (
-			    	<div >
+			    	<div key={index}>
 							<GameBlock games = {item}/>
 			    	</div>
 			    )

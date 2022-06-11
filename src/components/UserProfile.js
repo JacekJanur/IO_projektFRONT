@@ -32,7 +32,7 @@ const UserProfile = () => {
 	return (
 		<div className="user-cont">
 			{userDownloaded && <User data={user} />}
-			{noUser && <div className="no-user">No user found</div>}
+			{noUser && <div data-testid="no-user-profile" className="no-user">No user found</div>}
 		</div>
 	)
 }

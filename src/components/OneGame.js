@@ -27,7 +27,7 @@ const OneGame = ({game}) => {
 
 	return (
 		<>
-		< div className="one-game-cont">
+		< div data-testid="gameone" className="one-game-cont">
 			
 			<img className="one-game-img" src={`${href}`}/>
 			
@@ -48,7 +48,7 @@ const OneGame = ({game}) => {
 				<div className="comments-list">
 					{game.comments.map((item: any, index: any) => {
 					    return (
-					    	<GameComments data={item}/>
+					    	<GameComments key={index} data={item}/>
 					    )
 					})}
 			</div>
