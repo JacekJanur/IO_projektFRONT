@@ -48,6 +48,7 @@ function getCookie(cname) {
 
       });
        if(response.data.status == 200){
+        window.location.href = '/';
         setMessage("user created successfully")
          setCookie("token",response.data.token)
 
