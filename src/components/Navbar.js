@@ -60,7 +60,7 @@ const Navbar = () => {
             <Link to="/">Home</Link>
             {log===false &&<Link to="/login">Login</Link>}   
             {log===false &&<Link to="/register">Sign Up</Link> }
-            {log===true&&<button onClick={()=>{removeCookie("token")}}>Logout</button>}
+            {log===true&&<button className="logout" onClick={()=>{removeCookie("token")}}>Logout</button>}
             </div>
         </nav>
 	)

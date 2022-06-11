@@ -2,8 +2,26 @@ import React from 'react'
 import Game from './Game';
 import GameComments from './GameComments'
 import GameCommentsForm from './GameCommentsForm'
+import ReactStars from 'react-stars';
+import axios from 'axios';
 
 const OneGame = ({game}) => {
+	const ratingChanged = async (newRating) => {
+		const response = await axios.post("https://jacekjanurbackend.azurewebsites.net/reviews/add", {"game":game.id, "token":"pbkdf2_sha256$320000$nemYm6SDUkGQgjEOkTQNN3$fOSwc1rwhnl0brukxO+mTQ9a8z+wc490QAYOGxXLx/U=", "review":newRating},
+		{
+			headers: {
+			  'Content-Type': 'multipart/form-data'
+			}
+  
+		});
+		window.location.reload(false);
+	  }
+	 
+		
+	  
+
+
+	
 
 	let href = "https://jacekjanurbackend.azurewebsites.net/games/" + game.id + "/image";
 
@@ -16,8 +34,10 @@ const OneGame = ({game}) => {
 			<div className="one-game-game">
 
 				<h2> {game.name} </h2>
+				
 				<p> {game.description} </p>
-
+				<p className="stars"><ReactStars count={5} className={"star2"} value={parseFloat(game.avg)} onChange={ratingChanged} half={true} size={20} /> </p>
+				<b className="ocena">{game.avg.toFixed(1)}</b>
 				
 			</div>
 

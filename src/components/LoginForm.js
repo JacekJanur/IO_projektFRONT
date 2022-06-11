@@ -48,6 +48,9 @@ const LoginForm = () => {
 
     const handleSubmit = async (e) =>{
     e.preventDefault();
+    
+
+
     try{  
     const response = await axios.post('https://jacekjanurbackend.azurewebsites.net/users/login', {"password":password, "email":email},
         {
@@ -58,14 +61,14 @@ const LoginForm = () => {
         });
 
         if(response.status == 200){
-          alert(response.data.token)
+        
         setMessage("Login passed")
         setCookie("token",response.token)
         window.location.href = '/';
+        }else{
+          setMessage(response.message);
         }
-        else{
-          setMessage(response.data.message);
-         }
+        
 
         
       }catch (err) {
@@ -81,9 +84,9 @@ const LoginForm = () => {
             <div >
                 <Form onSubmit={handleSubmit} className="login-bg">
                     <Text>Email:</Text>
-                    <Box type="email" name="email" placeholder="Email" required value={email} onChange={(e)=>setEmail(e.target.value)}  />
+                    <Box type="email" name="email" placeholder="Email" className="input" required value={email} onChange={(e)=>setEmail(e.target.value)}  />
                     <Text>Password:</Text>
-                    <Box type="password" name="password" placeholder="Password" required value={password} onChange={(e)=>setPassword(e.target.value)} />
+                    <Box type="password" name="password" className="input" placeholder="Password" required value={password} onChange={(e)=>setPassword(e.target.value)} />
                     <Btn type="submit">Login</Btn>
                     <div className="message">{message ? <p>{message}</p> : null}</div>
 

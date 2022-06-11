@@ -36,7 +36,7 @@ const Game = ({games}) => {
 				<div className="t2"> {games.name} </div>
 				<div className="stars">
 				
-				<ReactStars count={5} className={"star3"} size={20}  value={parseInt(games.avg)}  onChange={ratingChanged} /> <b id="ocena2">{games.avg}</b></div>
+				<ReactStars count={5} className={"star3"} size={20}  value={parseFloat(games.avg)}  onChange={ratingChanged} /> <b id="ocena2">{games.avg.toFixed(1)}</b></div>
 				</div>
 				</div>
 			</div>

@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactStars from 'react-stars'
 
 const GameComments = ({data}) => {
 	return (
@@ -9,6 +10,7 @@ const GameComments = ({data}) => {
 				</div>
 				<div className="comment-text">
 					<p className="comment-textfield"> {data.text} </p>
+					
 				</div>
 			</div>
 	)

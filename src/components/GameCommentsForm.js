@@ -2,9 +2,49 @@ import React from 'react'
 import { useState } from 'react';
 import { BackgroundDiv,Box, Btn} from "./styleReg"
 import axios from 'axios';
+import { useEffect } from 'react';
+
+
 
 
 const GameCommentsForm = ({game_id}) => {
+
+
+  const [log, setLog] = useState("");
+
+  function getCookie(cname) {
+    let name = cname + "=";
+    let ca = document.cookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
+
+  function checkCookie() {
+    let user = getCookie("token");
+    if (user != "") {
+        setLog(true);
+    } else 
+    {
+        setLog(false);
+    }
+  }
+  useEffect(()=>{
+    checkCookie();
+  
+  
+  
+  }, [])
+  function refreshPage() {
+    window.location.reload(false);
+  }
 
 	const [text, setText] = useState('');
    	const [message, setMessage] = useState(false);
@@ -33,10 +73,10 @@ const GameCommentsForm = ({game_id}) => {
 		<div className="GameCommentsForm">
 			<form className="comments" onSubmit={handleSubmit}>
         
-		        <input type="text" className="field" required value={text} onChange={(e)=>setText(e.target.value)} placeholder="Leave a comment"/>
+		        {log===false && <input type="text" className="field" required value={text} onChange={(e)=>setText(e.target.value)} placeholder="You must log in if you want to add a comment"/>}
+		        {log===true && <input type="text" className="field" required value={text} onChange={(e)=>setText(e.target.value)} placeholder="Leave a comment"/>}
+		        {log===true &&<button onClick={refreshPage} className="send">Add Comment</button>}
 		        
-		        {!message &&<button className="send">Add Comment</button>}
-		        {message &&<Btn disabled>Add</Btn>}
 	      </form>
 		</div>
 	)

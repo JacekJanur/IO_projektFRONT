@@ -23,9 +23,9 @@ const GameBlock = ({games}) => {
 					</div>
 					<div className="star">
 					
-						<ReactStars count={5} className={"star2"} value={parseInt(games.avg)} size={20} /> 
+						<ReactStars count={5} className={"star2"} value={parseFloat(games.avg)} size={20} /> 
 
-						<b id="ocena">{games.avg}</b>
+						<b id="ocena">{games.avg.toFixed(1)}</b>
 					</div>
 				</div>
 			</a>
