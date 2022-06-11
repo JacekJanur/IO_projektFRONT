@@ -1,14 +1,13 @@
 import React from 'react'
-import Navbar from '../components/NavLogin';
+import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import LoginForm from '../components/LoginForm';
 
 const LoginRoute = () => {
 	return (
-	<div className="grid-container2">
+	<div className="login-cont">
 	    <Navbar/>
 	    <LoginForm />
-	    <Footer/>
     </div>
 	)
 }

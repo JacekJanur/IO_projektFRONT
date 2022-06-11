@@ -4,7 +4,7 @@ import LeftColumn from './LeftColumn'
 
 const Content = () => {
 	return (
-		<div className="item2">
+		<div>
 			<LeftColumn />
 		</div>
 	)

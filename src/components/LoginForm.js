@@ -75,12 +75,11 @@ const LoginForm = () => {
 	return (
         
 		<>
-        <div className="item4">
           
-            <BackgroundDiv>
-                <Form onSubmit={handleSubmit}>
+            <div >
+                <Form onSubmit={handleSubmit} className="login-bg">
                     <Text>Email:</Text>
-                    <Box type="text" name="email" placeholder="Email" required value={email} onChange={(e)=>setEmail(e.target.value)}  />
+                    <Box type="email" name="email" placeholder="Email" required value={email} onChange={(e)=>setEmail(e.target.value)}  />
                     <Text>Password:</Text>
                     <Box type="password" name="password" placeholder="Password" required value={password} onChange={(e)=>setPassword(e.target.value)} />
                     <Btn type="submit">Login</Btn>
@@ -88,7 +87,6 @@ const LoginForm = () => {
 
                     
                 </Form>
-            </BackgroundDiv>
             </div>
             
         

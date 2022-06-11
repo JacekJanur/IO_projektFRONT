@@ -2,7 +2,6 @@ import React from 'react'
 
 const GameComments = ({data}) => {
 	return (
-		<div className="comments">
 			<div className="comment">
 				<div className="comment-user">
 					<p className="comment-user-name"> {data.username} </p>
@@ -12,7 +11,6 @@ const GameComments = ({data}) => {
 					<p className="comment-textfield"> {data.text} </p>
 				</div>
 			</div>
-		</div>
 	)
 }
 

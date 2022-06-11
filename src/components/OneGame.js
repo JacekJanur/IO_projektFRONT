@@ -4,23 +4,36 @@ import GameComments from './GameComments'
 import GameCommentsForm from './GameCommentsForm'
 
 const OneGame = ({game}) => {
+
+	let href = "https://jacekjanurbackend.azurewebsites.net/games/" + game.id + "/image";
+
 	return (
-		<div className="item2">
+		<>
+		< div className="one-game-cont">
 			
-			<Game games={game}/>
+			<img className="one-game-img" src={`${href}`}/>
 			
-			<div className="img">
+			<div className="one-game-game">
 
-				<GameCommentsForm game_id = {game.id} />
+				<h2> {game.name} </h2>
+				<p> {game.description} </p>
 
-				{game.comments.map((item: any, index: any) => {
-				    return (
-				    	<GameComments data={item}/>
-				    )
-				})}
+				
 			</div>
 
 		</div>
+		<div className="one-game-comment-cont">
+
+		<GameCommentsForm game_id = {game.id} />
+				<div className="comments-list">
+					{game.comments.map((item: any, index: any) => {
+					    return (
+					    	<GameComments data={item}/>
+					    )
+					})}
+			</div>
+		</div>
+		</>
 	)
 }
 

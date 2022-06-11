@@ -11,11 +11,10 @@ import Footer from './components/Footer';
 function App() {
   return (
     
-    <div className="grid-container">
+    <>
       <Navbar/>
       <Content/>
-      <Footer/>
-    </div>
+    </>
   );
 }
 

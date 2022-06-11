@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
 import {useParams} from "react-router-dom";
-import NavGame from '../components/NavGame';
+import Navbar from '../components/Navbar';
 import Content from '../components/Content';
 import Footer from '../components/Footer';
 import OneGame from '../components/OneGame';
@@ -29,13 +29,12 @@ const GameRoute = () => {
 	return (
 		<div className="grid-container3">
 			
-	      <NavGame game={game}/>
+	      <Navbar/>
 	      {gameDownloaded ? (
 	        <OneGame game = {game}/>
 	      ) : (
 	        <div></div>
 	      )}
-	      <Footer/>
 	    </div>
 	)
 }

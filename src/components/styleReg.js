@@ -32,7 +32,7 @@ width: 80%;
   box-sizing: border-box;
   border: 3px solid #555;
   background-color: #d1d1d1;
-  font-size:0.3em;
+  font-size:1em;
  
   
 `
@@ -45,10 +45,10 @@ padding: 15px 32px;
 text-align: center;
 text-decoration: none;
 display: inline-block;
-font-size: 16px;
+font-size: 1em;
 margin: 36px 2px;
 cursor: pointer;
-border-radius:50%;
+border-radius:10px;
 &:hover{
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }

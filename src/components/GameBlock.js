@@ -11,27 +11,24 @@ const GameBlock = ({games}) => {
 	return (
 		
 		<div className="game-block">
-			
-			
-			<div className="flexbox-item flexbox-item-2"><div className="image" style={{
-			    backgroundImage: `url(${href})`
-			  }}></div>
-			<div className="tekst"><div className="t">
-					<div>
-						{games.genre_name}
-                    </div>
+			<a href={"games/" + games.id}>
+				<img src={`${href}`}/>
+				<div className="tekst">
+					<div className="t">
+						<p className="game-name"> {games.name} </p>
+						<p className="game-genre">
+							{games.genre_name}
+	                    </p>
+						
+					</div>
+					<div className="star">
 					
+						<ReactStars count={5} className={"star2"} value={parseInt(games.avg)} size={20} /> 
+
+						<b id="ocena">{games.avg}</b>
+					</div>
 				</div>
-			<div className="t2"> {games.name} </div>
-			<div className="star">
-			
-			<ReactStars count={5} className={"star2"} value={parseInt(games.avg)} size={20} /> <b id="ocena">{games.avg}</b></div>
-			</div>
-			</div>
-			
-			
-			
-			
+			</a>
 		</div>
 	);
 }

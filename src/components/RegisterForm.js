@@ -1,5 +1,5 @@
 import React from 'react'
-import { BackgroundDiv,Box, Btn, Heading, Text} from "./styleReg"
+import { Content,BackgroundDiv, Form, Box, Btn, Text, Heading, Error } from "./styleLog"
 import { useState } from 'react';
 import axios from 'axios';
 
@@ -69,10 +69,8 @@ function getCookie(cname) {
   
       
   return (
-    <div className="item4">
-    <BackgroundDiv>
-  
-      <form onSubmit={handleSubmit}>
+    <div >
+      <Form onSubmit={handleSubmit} className="login-bg">
         <Text>Name:</Text>
         <Box type="text" required value={name} placeholder="Name" onChange={(e)=>setName(e.target.value)}/>
         <Text>Email:</Text>
@@ -83,8 +81,7 @@ function getCookie(cname) {
         <Btn>Create account</Btn>
         
         <div className="message">{message ? <p>{message}</p> : null}</div>
-      </form>
-    </BackgroundDiv>
+      </Form>
     </div>
   );
 }

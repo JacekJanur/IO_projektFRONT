@@ -50,24 +50,19 @@ const Navbar = () => {
    
 	return (
         
-		<div className="item1">
-
-       <div className="search">
-          
-        <input type="text" name="searchBar" id="searchBar" placeholder="what game you want to find"/>
-       </div>
-        
-        <div className="logowanie">
-        {log===false &&<Link to="/login">Login</Link>}   
-        {log===false &&<Link to="/register">Sign Up</Link> }
-        {log===true&&<button onClick={()=>{removeCookie("token")}}>Logout</button>}
-        
-
-        
-        
-        
-        </div>
-        </div>
+	   <nav>
+           <div className="search">
+              
+            <input type="text" name="searchBar" id="searchBar" placeholder="what game you want to find"/>
+           </div>
+            
+            <div className="logowanie">
+            <Link to="/">Home</Link>
+            {log===false &&<Link to="/login">Login</Link>}   
+            {log===false &&<Link to="/register">Sign Up</Link> }
+            {log===true&&<button onClick={()=>{removeCookie("token")}}>Logout</button>}
+            </div>
+        </nav>
 	)
   
 }

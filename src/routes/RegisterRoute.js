@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../components/NavRegister';
+import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import RegisterForm from '../components/RegisterForm';
 
@@ -8,7 +8,6 @@ const RegisterRoute = () => {
 	<div className="grid-container2">
 	    <Navbar/>
 	    <RegisterForm />
-	    <Footer/>
     </div>
 	)
 }
