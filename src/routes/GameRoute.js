@@ -13,13 +13,14 @@ const GameRoute = () => {
 
 	const [game, setGame] = useState();
 	const [gameDownloaded, setGameDownloaded] = useState(false);
+	const [noGame, setNoGame] = useState(false);
 
     useEffect(() => {
         const fetchData = async () => {
 		    const data = await fetch("https://jacekjanurbackend.azurewebsites.net/games/"+id)
 		    const json = await data.json();
     		setGame(json);
-	      	setGameDownloaded(true);
+	      	(json['id'] != undefined) ? setGameDownloaded(true) : setNoGame(true)
 		  }
 
 	  	fetchData()
@@ -30,10 +31,11 @@ const GameRoute = () => {
 		<div className="grid-container3">
 			
 	      <Navbar/>
-	      {gameDownloaded ? (
+	      {gameDownloaded && (
 	        <OneGame game = {game}/>
-	      ) : (
-	        <div></div>
+	      )}
+	      {noGame && (
+	        <div className="no-game">No game found</div>
 	      )}
 	    </div>
 	)

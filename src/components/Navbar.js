@@ -8,6 +8,7 @@ import PropTypes from 'prop-types';
 const Navbar = () => {
     
     const [log, setLog] = useState("");
+    const [str, setStr] = useState("");
     
     function getCookie(cname) {
         let name = cname + "=";
@@ -48,12 +49,19 @@ const Navbar = () => {
     }, [])
     
    
+    const handleSubmit = () =>{
+         window.location.href="/search/" + str;
+        
+    };
+
+
+
 	return (
         
 	   <nav>
            <div className="search">
-              
-            <input type="text" name="searchBar" id="searchBar" placeholder="what game you want to find"/>
+                    <input type="text" name="searchBar" id="searchBar" required value={str} onChange={(e)=>setStr(e.target.value)}/>
+                    <button type="button" onClick={handleSubmit}>Search</button>
            </div>
             
             <div className="logowanie">

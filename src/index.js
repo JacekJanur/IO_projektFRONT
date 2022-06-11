@@ -8,6 +8,8 @@ import reportWebVitals from './reportWebVitals';
 import LoginRoute from "./routes/LoginRoute";
 import RegisterRoute from "./routes/RegisterRoute";
 import GameRoute from "./routes/GameRoute";
+import SearchRoute from "./routes/SearchRoute";
+import UserRoute from "./routes/UserRoute";
 
 
 import {
@@ -24,6 +26,9 @@ root.render(
       <Route path="login" element={<LoginRoute />} />
       <Route path="register" element={<RegisterRoute />} />
       <Route path="games/:id" element={<GameRoute/>}/>
+      <Route path="search/:str" element={<SearchRoute/>}/>
+      <Route path="user/:id" element={<UserRoute/>}/>
+      <Route path="*" element={<App/>}/>
     </Routes>
   </BrowserRouter>
 );

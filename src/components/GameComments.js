@@ -5,7 +5,9 @@ const GameComments = ({data}) => {
 	return (
 			<div className="comment">
 				<div className="comment-user">
-					<p className="comment-user-name"> {data.username} </p>
+					<a href={"/user/" + data.user}>
+						<p className="comment-user-name"> {data.username} </p>
+					</a>
 					<p className="comment-user-date"> {data.date} </p>
 				</div>
 				<div className="comment-text">
