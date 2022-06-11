@@ -7,15 +7,16 @@ height:90vh;
 
 `
 export const BackgroundDiv = styled.div`
-  border: 1px solid black;
+border: 1px solid black;
   width: 30vw;
+  margin-left:420px;
   text-align: center;
   display: block;
-  margin: auto;
-  height: 39rem;
+  margin-top:10px;
+  height: 30rem;
   background-color: white;
-  margin-top:100px;
-  margin-bottom:100px;
+  margin-bottom:2px;
+  border-radius:20px;
 `
 
 export const Form = styled.form`
@@ -25,40 +26,37 @@ export const Form = styled.form`
 `
 
 export const Box = styled.input`
-  display: block;
-  width: 15vw;
-  height: 2rem;
-  padding: 0.5rem;
-  font-size: 1.1em;
-  font-weight: 500;
-  margin-bottom: 2rem;
-  textAlignVertical:center;
-  margin-left:115px;
-  position:flex;
-  justify-content:center;
+width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid #555;
+  background-color: #d1d1d1;
+  font-size:0.3em;
  
   
 `
 
 export const Btn = styled.button`
-  background-color: #1E88E5;
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 30px 2px;
-  cursor: pointer;
-  &:hover{
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-  }
+background-color: #1E88E5;
+border: none;
+color: white;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 36px 2px;
+cursor: pointer;
+border-radius:50%;
+&:hover{
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
 `
 
 export const Text = styled.p`
-  font-size: 3rem;
-  color: black;
+font-size: 1rem;
+color: black;
 `
 
 export const Heading = styled.h1`

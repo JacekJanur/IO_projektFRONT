@@ -5,10 +5,11 @@ import GameCommentsForm from './GameCommentsForm'
 
 const OneGame = ({game}) => {
 	return (
-		<div className="cont">
+		<div className="item2">
+			
 			<Game games={game}/>
 			
-			<div>
+			<div className="img">
 
 				<GameCommentsForm game_id = {game.id} />
 

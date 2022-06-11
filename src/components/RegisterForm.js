@@ -1,5 +1,5 @@
 import React from 'react'
-import { BackgroundDiv,Box, Btn} from "./styleReg"
+import { BackgroundDiv,Box, Btn, Heading, Text} from "./styleReg"
 import { useState } from 'react';
 import axios from 'axios';
 
@@ -39,7 +39,7 @@ function getCookie(cname) {
   
   const handleSubmit = async (e) =>{
     e.preventDefault();
-   
+   try{
     const response = await axios.post('https://jacekjanurbackend.azurewebsites.net/users/register', {"name":name, "password":password, "email":email},
       {
           headers: {
@@ -48,32 +48,43 @@ function getCookie(cname) {
 
       });
        if(response.data.status == 200){
+        setMessage("user created successfully")
          setCookie("token",response.data.token)
 
-       };
+       }else{
+        setMessage("the given email is taken");
+       }
       
     
 
        
+    }catch (err) {
+      console.log(err);
     }
+  }
   
 
 
   
       
   return (
+    <div className="item4">
     <BackgroundDiv>
-      <h2>Sign Up</h2>
+  
       <form onSubmit={handleSubmit}>
+        <Text>Name:</Text>
+        <Box type="text" required value={name} placeholder="Name" onChange={(e)=>setName(e.target.value)}/>
+        <Text>Email:</Text>
+        <Box type="email" required value={email} placeholder="Email" onChange={(e)=>setEmail(e.target.value)}/>
+        <Text>Password:</Text>
+        <Box type="password" required value={password} placeholder="Password" onChange={(e)=>setPassword(e.target.value)}/>
         
-        <Box type="text" required value={name} onChange={(e)=>setName(e.target.value)}/>
-        <Box type="email" required value={email} onChange={(e)=>setEmail(e.target.value)}/>
-        <Box type="password" required value={password} onChange={(e)=>setPassword(e.target.value)}/>
+        <Btn>Create account</Btn>
         
-        {!message &&<Btn>Create account</Btn>}
-        {message &&<Btn disabled>Add</Btn>}
+        <div className="message">{message ? <p>{message}</p> : null}</div>
       </form>
     </BackgroundDiv>
+    </div>
   );
 }
 /* username email haslo pow haslo */

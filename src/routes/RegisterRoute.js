@@ -5,7 +5,7 @@ import RegisterForm from '../components/RegisterForm';
 
 const RegisterRoute = () => {
 	return (
-	<div>
+	<div className="grid-container2">
 	    <Navbar/>
 	    <RegisterForm />
 	    <Footer/>

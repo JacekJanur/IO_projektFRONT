@@ -1,12 +1,11 @@
 import React from 'react'
 import LeftColumn from './LeftColumn'
-import RightColumn from './RightColumn'
+
 
 const Content = () => {
 	return (
-		<div className="content">
+		<div className="item2">
 			<LeftColumn />
-			<RightColumn  />
 		</div>
 	)
 }

@@ -48,7 +48,7 @@ const LoginForm = () => {
 
     const handleSubmit = async (e) =>{
     e.preventDefault();
-       
+    try{  
     const response = await axios.post('https://jacekjanurbackend.azurewebsites.net/users/login', {"password":password, "email":email},
         {
             headers: {
@@ -58,18 +58,25 @@ const LoginForm = () => {
         });
          
         if(response.status == 200){
+        setMessage("Login passed")
         setCookie("token",response.data.token)
         window.location.href = '/';
-        };
-             
+        }else{
+          setMessage("the given email is taken");
+         }
+
+        
+      }catch (err) {
+        console.log(err);
+      } 
     
         };
     
 	return (
         
 		<>
-        <Content>
-            <center>
+        <div className="item4">
+          
             <BackgroundDiv>
                 <Form onSubmit={handleSubmit}>
                     <Text>Email:</Text>
@@ -77,12 +84,14 @@ const LoginForm = () => {
                     <Text>Password:</Text>
                     <Box type="password" name="password" placeholder="Password" required value={password} onChange={(e)=>setPassword(e.target.value)} />
                     <Btn type="submit">Login</Btn>
+                    <div className="message">{message ? <p>{message}</p> : null}</div>
 
                     
                 </Form>
             </BackgroundDiv>
-            </center>
-        </Content>
+            </div>
+            
+        
                
         </> 
         

@@ -5,7 +5,7 @@ import LoginForm from '../components/LoginForm';
 
 const LoginRoute = () => {
 	return (
-	<div>
+	<div className="grid-container2">
 	    <Navbar/>
 	    <LoginForm />
 	    <Footer/>

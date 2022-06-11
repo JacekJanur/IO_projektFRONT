@@ -41,43 +41,30 @@ const Navbar = () => {
   
       useEffect(()=>{
         checkCookie();
-        console.log("do");
+        
     }, [])
 
 	return (
         
-		<nav>
+		<div className="item1">
         
         {/* <Link to="/">Home</Link> |{" "} */}
-       <div className="image">'</div>
+       
        
        <div className="search">
           
         <input type="text" name="searchBar" id="searchBar" placeholder="what game you want to find"/>
        </div>
-        <div className="navmenu">
-        <ul>
-
-            <li><Link to="">Games</Link>
-            <ul>
-                <li><Link to="">RPG</Link></li>
-                <li><Link to="">ACTION</Link></li>
-                <li><Link to="">STRATEGY</Link></li>
-                <li><Link to="">SHOOTER</Link></li>
-                <li><Link to="">SURVIVAL</Link></li>
-                <li><Link to="">ADVENTURE</Link></li>
-            </ul>
-            </li>
-        </ul>
-        </div>
-        
+       
+       <div className="logowanie">
         <Link to="/">Home</Link>
-        {log===false &&<Link to="/login">Login</Link>}   
+          
         {log===false &&<Link to="/register">Sign Up</Link> }
         {log===true&&<button onClick={()=>{removeCookie("token")}}>Logout</button>}
+        </div>
         
         
-        </nav>
+        </div>
 	)
 }
 

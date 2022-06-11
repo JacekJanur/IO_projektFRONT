@@ -31,11 +31,11 @@ const GameCommentsForm = ({game_id}) => {
 
 	return (
 		<div className="GameCommentsForm">
-			<form onSubmit={handleSubmit}>
+			<form className="comments" onSubmit={handleSubmit}>
         
-		        <Box type="text" required value={text} onChange={(e)=>setText(e.target.value)} placeholder="Leave a comment"/>
+		        <input type="text" className="field" required value={text} onChange={(e)=>setText(e.target.value)} placeholder="Leave a comment"/>
 		        
-		        {!message &&<Btn>Submit</Btn>}
+		        {!message &&<button className="send">Add Comment</button>}
 		        {message &&<Btn disabled>Add</Btn>}
 	      </form>
 		</div>

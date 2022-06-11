@@ -2,10 +2,10 @@ import React from 'react'
 
 const Footer = () => {
 	return (
-		<footer>
+		<div className="item3">
 			<div className="fot">Copyright &copy; 2022 by Jacek Janur and Damian Kuciel
 			</div>
-		</footer>
+		</div>
 	)
 }
 

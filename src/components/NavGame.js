@@ -5,7 +5,7 @@ import { useState } from 'react';
 import PropTypes from 'prop-types';
 
 
-const Navbar = () => {
+const NavGame = () => {
     
     const [log, setLog] = useState("");
     
@@ -54,10 +54,11 @@ const Navbar = () => {
 
        <div className="search">
           
-        <input type="text" name="searchBar" id="searchBar" placeholder="what game you want to find"/>
+        <input type="text" name="searchBar" id="searchBar2" placeholder="what game you want to find"/>
        </div>
         
-        <div className="logowanie">
+        <div className="logowanie3">
+        <Link to="/">Home</Link>
         {log===false &&<Link to="/login">Login</Link>}   
         {log===false &&<Link to="/register">Sign Up</Link> }
         {log===true&&<button onClick={()=>{removeCookie("token")}}>Logout</button>}
@@ -72,4 +73,4 @@ const Navbar = () => {
   
 }
 
-export default Navbar
+export default NavGame

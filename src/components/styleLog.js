@@ -12,14 +12,15 @@ export const Content = styled.div`
 
 export const BackgroundDiv = styled.div`
   border: 1px solid black;
-  width: 30%;
+  margin-left:420px;
+  width: 30vw;
   text-align: center;
   display: block;
-  margin-top:300px;
-  
-  height: 30rem;
+  margin-top:10px;
+  height: 25rem;
   background-color: white;
-  margin-bottom:5vh;
+  border-radius:20px;
+  
   
 `
 
@@ -35,6 +36,7 @@ export const Box = styled.input`
   box-sizing: border-box;
   border: 3px solid #555;
   background-color: #d1d1d1;
+  font-size:0.3em;
   
 `
 
@@ -49,13 +51,14 @@ export const Btn = styled.button`
   font-size: 16px;
   margin: 36px 2px;
   cursor: pointer;
+  border-radius:50%;
   &:hover{
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
   }
 `
 
 export const Text = styled.p`
-  font-size: 2rem;
+  font-size: 1rem;
   color: black;
 `
 
