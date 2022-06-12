@@ -4,7 +4,6 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 
 
-
 const Navbar = () => {
     
     const [log, setLog] = useState("");
@@ -27,8 +26,13 @@ const Navbar = () => {
 
     function checkCookie() {
         let user = getCookie("token");
+<<<<<<< HEAD
         if (user != "") { // eslint-disable-line
+=======
+        if (user != "") {
+>>>>>>> 5f2a302b69683055db5ce917cd5d81ba3c6efd82
             setLog(true);
+
         } else 
         {
             setLog(false);
@@ -37,7 +41,7 @@ const Navbar = () => {
 
     function removeCookie(cname){
         document.cookie = cname + " = ; expires = Thu , 01 Jan 1970 00:00:00 GMT";
-        console.log("usunieto");
+        document.cookie = cname + '=; Max-Age=0; path=/; domain=' + window.location.host;
         window.location.href="/";
       }
   

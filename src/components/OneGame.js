@@ -35,7 +35,7 @@ const OneGame = ({game}) => {
 				<h2> {game.name} </h2>
 				
 				<p> {game.description} </p>
-				<p className="stars"><ReactStars count={5} className={"star2"} value={parseFloat(game.avg)} onChange={ratingChanged} half={true} size={20} /> </p>
+				<div className="stars"><ReactStars count={5} className={"star2"} value={parseFloat(game.avg)} onChange={ratingChanged} half={true} size={20} /> </div>
 				<b className="ocena">{game.avg.toFixed(1)}</b>
 				
 			</div>
