@@ -8,11 +8,7 @@ const Game = ({games}) => {
 	let href = "https://jacekjanurbackend.azurewebsites.net/games/" + games.id + "/image";
 
 	const ratingChanged = async (newRating) => {
-<<<<<<< HEAD
 	  const response = await axios.post("https://jacekjanurbackend.azurewebsites.net/reviews/add", {"game":games.id, "token":"pbkdf2_sha256$320000$nemYm6SDUkGQgjEOkTQNN3$fOSwc1rwhnl0brukxO+mTQ9a8z+wc490QAYOGxXLx/U=", "review":newRating}, 
-=======
-	  const response = await axios.post("https://jacekjanurbackend.azurewebsites.net/reviews/add", {"game":games.id, "token":"pbkdf2_sha256$320000$nemYm6SDUkGQgjEOkTQNN3$fOSwc1rwhnl0brukxO+mTQ9a8z+wc490QAYOGxXLx/U=", "review":newRating},
->>>>>>> 5f2a302b69683055db5ce917cd5d81ba3c6efd82
       {
           headers: {
             'Content-Type': 'multipart/form-data'
