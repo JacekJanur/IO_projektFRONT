@@ -5,15 +5,49 @@ import ReactStars from 'react-stars';
 import axios from 'axios';
 
 const OneGame = ({game}) => {
+
+
+	function getCookie(cname) {
+        let name = cname + "=";
+        let ca = document.cookie.split(';');
+        for(let i = 0; i < ca.length; i++) {
+          let c = ca[i];
+          while (c.charAt(0) == ' ') { // eslint-disable-line
+            c = c.substring(1);
+          }
+          if (c.indexOf(name) == 0) { // eslint-disable-line 
+            return c.substring(name.length, c.length);
+          }
+        }
+        return "";
+      }
+
+    function checkCookie() {
+        let user = getCookie("token");
+        if (user != "") {
+            return(true);
+        } else 
+        {
+            return(false);
+        }
+    }
+
+
 	const ratingChanged = async (newRating) => {
-		const response = await axios.post("https://jacekjanurbackend.azurewebsites.net/reviews/add", {"game":game.id, "token":"pbkdf2_sha256$320000$nemYm6SDUkGQgjEOkTQNN3$fOSwc1rwhnl0brukxO+mTQ9a8z+wc490QAYOGxXLx/U=", "review":newRating},// eslint-disable-line
+		if(!checkCookie())
 		{
-			headers: {
-			  'Content-Type': 'multipart/form-data'
-			}
-  
-		});
-		window.location.reload(false);
+			alert("Login to review a game!")
+		}
+		else{
+			const response = await axios.post("https://jacekjanurbackend.azurewebsites.net/reviews/add", {"game":game.id, "token":getCookie("token"), "review":newRating},// eslint-disable-line
+			{
+				headers: {
+				  'Content-Type': 'multipart/form-data'
+				}
+	  
+			});
+			window.location.reload(false);
+		}
 	  }
 	 
 		

@@ -22,7 +22,7 @@ const GameRoute = () => {
 		  }
 
 	  	fetchData()
-     }, );
+     }, []);
 
 
 	return (

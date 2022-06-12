@@ -58,13 +58,12 @@ const GameCommentsForm = ({game_id}) => {
 
       });
        if(response.data.status == 200){  // eslint-disable-line 
-          refreshPage()
        		console.log("success");
        }
        else{
        		console.log(game_id);
        }
-
+       refreshPage()
     }
 
 	return (
