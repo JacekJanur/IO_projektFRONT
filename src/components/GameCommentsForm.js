@@ -16,10 +16,10 @@ const GameCommentsForm = ({game_id}) => {
     let ca = document.cookie.split(';');
     for(let i = 0; i < ca.length; i++) {
       let c = ca[i];
-      while (c.charAt(0) == ' ') { // eslint-disable-line 
+      while (c.charAt(0) == ' ') { 
         c = c.substring(1);
       }
-      if (c.indexOf(name) == 0) { // eslint-disable-line 
+      if (c.indexOf(name) == 0) { 
         return c.substring(name.length, c.length);
       }
     }
@@ -28,7 +28,7 @@ const GameCommentsForm = ({game_id}) => {
 
   function checkCookie() {
     let user = getCookie("token");
-    if (user != "") { // eslint-disable-line 
+    if (user != "") { 
         setLog(true);
     } else 
     {
@@ -50,7 +50,7 @@ const GameCommentsForm = ({game_id}) => {
   
   const handleSubmit = async (e) =>{
     e.preventDefault();
-    const response = await axios.post('https://jacekjanurbackend.azurewebsites.net/comments/add', {"game":game_id, "token":"pbkdf2_sha256$320000$PhB9oFm2Jgw6CUMJe87326$EbnaeDqR8/PGWiLhvfZhShHNYtUWvc69tYMD8AhN5bU=", "text":text},
+    const response = await axios.post('https://jacekjanurbackend.azurewebsites.net/comments/add', {"game":game_id, "token":getCookie("token"), "text":text},
       {
           headers: {
             'Content-Type': 'multipart/form-data'
@@ -58,7 +58,7 @@ const GameCommentsForm = ({game_id}) => {
 
       });
        if(response.data.status == 200){  // eslint-disable-line 
-         
+          refreshPage()
        		console.log("success");
        }
        else{
@@ -70,10 +70,9 @@ const GameCommentsForm = ({game_id}) => {
 	return (
 		<div className="GameCommentsForm">
 			<form className="comments" onSubmit={handleSubmit}>
-        
 		        {log===false && <input type="text" className="field" required value={text} onChange={(e)=>setText(e.target.value)} placeholder="You must log in if you want to add a comment"/>}
 		        {log===true && <input type="text" className="field" required value={text} onChange={(e)=>setText(e.target.value)} placeholder="Leave a comment"/>}
-		        {log===true &&<button onClick={refreshPage} className="send">Add Comment</button>}
+		        {log===true &&<button className="send">Add Comment</button>}
 		        
 	      </form>
 		</div>

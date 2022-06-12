@@ -7,8 +7,24 @@ const Game = ({games}) => {
 
 	let href = "https://jacekjanurbackend.azurewebsites.net/games/" + games.id + "/image";
 
+  function getCookie(cname) {
+    let name = cname + "=";
+    let ca = document.cookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') { 
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) { 
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
+
+
 	const ratingChanged = async (newRating) => {
-	  const response = await axios.post("https://jacekjanurbackend.azurewebsites.net/reviews/add", {"game":games.id, "token":"pbkdf2_sha256$320000$nemYm6SDUkGQgjEOkTQNN3$fOSwc1rwhnl0brukxO+mTQ9a8z+wc490QAYOGxXLx/U=", "review":newRating}, 
+	  const response = await axios.post("https://jacekjanurbackend.azurewebsites.net/reviews/add", {"game":games.id, "token":getCookie("token"), "review":newRating}, 
       {
           headers: {
             'Content-Type': 'multipart/form-data'
