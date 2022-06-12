@@ -17,7 +17,7 @@ const LoginForm = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [message, setMessage] = useState(false);
-    const [log, setLog] = useState(""); // eslint-disable-line no-unused-vars
+    const [log, setLog] = useState(""); 
 
     const handleSubmit = async (e) =>{
     e.preventDefault();
@@ -42,7 +42,7 @@ const LoginForm = () => {
     function checkCookie() { // eslint-disable-line no-unused-vars
       
       let user = getCookie("token");
-      if (user != null) { 
+      if (user != "") {  // eslint-disable-line
         setLog(true);
       } else 
       {
@@ -89,7 +89,7 @@ const LoginForm = () => {
                     <Text>Password:</Text>
                     <Box type="password" name="password" className="input" placeholder="Password" required value={password} onChange={(e)=>setPassword(e.target.value)} />
                     <Btn type="submit">Login</Btn>
-                    <div className="message">{message ? <p>{message}</p> : null}</div>
+                    <div className="message">{message ? <p className="error">{message}</p> : null}</div>
 
                 </Form>
             </div>

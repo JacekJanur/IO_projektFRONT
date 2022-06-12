@@ -12,7 +12,7 @@ function setCookie(cname, cvalue) {
   let expires = "expires="+d.toUTCString();
   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
-function getCookie(cname) { // eslint-disable-line no-unused-vars
+function getCookie(cname) { 
   let name = cname + "=";
   let ca = document.cookie.split(';');
   for(let i = 0; i < ca.length; i++) {

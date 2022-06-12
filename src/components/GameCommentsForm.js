@@ -46,7 +46,7 @@ const GameCommentsForm = ({game_id}) => {
   }
 
 	const [text, setText] = useState('');
-   	const [message, setMessage] = useState(false); // eslint-disable-line no-unused-vars
+   	const [message, setMessage] = useState(false); 
   
   const handleSubmit = async (e) =>{
     e.preventDefault();
