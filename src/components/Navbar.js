@@ -17,7 +17,7 @@ const Navbar = () => {
           while (c.charAt(0) == ' ') { // eslint-disable-line
             c = c.substring(1);
           }
-          if (c.indexOf(name) == 0) { // eslint-disable-line
+          if (c.indexOf(name) == 0) { // eslint-disable-line 
             return c.substring(name.length, c.length);
           }
         }

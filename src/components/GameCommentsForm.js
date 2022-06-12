@@ -50,7 +50,6 @@ const GameCommentsForm = ({game_id}) => {
   
   const handleSubmit = async (e) =>{
     e.preventDefault();
-   
     const response = await axios.post('https://jacekjanurbackend.azurewebsites.net/comments/add', {"game":game_id, "token":"pbkdf2_sha256$320000$PhB9oFm2Jgw6CUMJe87326$EbnaeDqR8/PGWiLhvfZhShHNYtUWvc69tYMD8AhN5bU=", "text":text},
       {
           headers: {
