@@ -26,11 +26,7 @@ const Navbar = () => {
 
     function checkCookie() {
         let user = getCookie("token");
-<<<<<<< HEAD
         if (user != "") {
-=======
-        if (user != null) { // eslint-disable-line
->>>>>>> d224bd41de81136ad215e134cab33bd53f66db31
             setLog(true);
 
         } else 
@@ -40,7 +36,7 @@ const Navbar = () => {
     }
 
     function removeCookie(cname){
-        //document.cookie = cname + " = ; expires = Thu , 01 Jan 1970 00:00:00 GMT";
+        document.cookie = cname + " = ; expires = Thu , 01 Jan 1970 00:00:00 GMT";
         document.cookie = cname + '=; Max-Age=0; path=/; domain=' + window.location.host;
         window.location.href="/";
       }
