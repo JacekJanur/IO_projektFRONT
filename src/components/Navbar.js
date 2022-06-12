@@ -27,7 +27,7 @@ const Navbar = () => {
 
     function checkCookie() {
         let user = getCookie("token");
-        if (user != null) { // eslint-disable-line
+        if (user != "") { // eslint-disable-line
             setLog(true);
         } else 
         {

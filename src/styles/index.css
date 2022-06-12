@@ -92,6 +92,10 @@ h1{
 	
 	
 }
+.error{
+	color:black;
+}
+
 .image:hover{
 	filter: brightness(50%);
 }
@@ -266,6 +270,7 @@ img:hover{
 	
 	
 }
+
 
 .h2-user{
 
