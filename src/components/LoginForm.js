@@ -22,7 +22,10 @@ const LoginForm = () => {
     const handleSubmit = async (e) =>{
     e.preventDefault();
     function setCookie(cname, cvalue) {
-      document.cookie = cname + "=" + cvalue ;
+      const d = new Date();
+      d.setTime(d.getTime() + (30 * 24 * 60 * 60 * 1000));
+      let expires = "expires="+d.toUTCString();
+      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
     }
     function getCookie(cname) {
       let name = cname + "=";
