@@ -4,7 +4,6 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 
-
 const Navbar = () => {
     
     const [log, setLog] = useState("");
@@ -27,8 +26,9 @@ const Navbar = () => {
 
     function checkCookie() {
         let user = getCookie("token");
-        if (user != null) {
+        if (user != "") {
             setLog(true);
+
         } else 
         {
             setLog(false);
@@ -36,8 +36,8 @@ const Navbar = () => {
     }
 
     function removeCookie(cname){
-        document.cookie = cname + " = ; expires = Thu , 01 Jan 1970 00:00:00 GMT";
-        console.log("usunieto");
+        //document.cookie = cname + " = ; expires = Thu , 01 Jan 1970 00:00:00 GMT";
+        document.cookie = cname + '=; Max-Age=0; path=/; domain=' + window.location.host;
         window.location.href="/";
       }
   
