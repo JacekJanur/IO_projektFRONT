@@ -1,5 +1,5 @@
 import React from 'react'
-import { Content,BackgroundDiv, Form, Box, Btn, Text, Heading, Error } from "./styleLog"
+import { Form, Box, Btn, Text} from "./styleLog"
 import { useState } from 'react';
 import axios from 'axios';
 
@@ -12,15 +12,15 @@ function setCookie(cname, cvalue) {
   let expires = "expires="+d.toUTCString();
   document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
-function getCookie(cname) {
+function getCookie(cname) { // eslint-disable-line no-unused-vars
   let name = cname + "=";
   let ca = document.cookie.split(';');
   for(let i = 0; i < ca.length; i++) {
     let c = ca[i];
-    while (c.charAt(0) == ' ') {
+    while (c.charAt(0) == ' ') { // eslint-disable-line
       c = c.substring(1);
     }
-    if (c.indexOf(name) == 0) {
+    if (c.indexOf(name) == 0) { // eslint-disable-line
       return c.substring(name.length, c.length);
     }
   }
@@ -47,7 +47,7 @@ function getCookie(cname) {
           }
 
       });
-       if(response.data.status == 200){
+       if(response.data.status == 200){ // eslint-disable-line
         window.location.href = '/';
         setMessage("user created successfully")
          setCookie("token",response.data.token)

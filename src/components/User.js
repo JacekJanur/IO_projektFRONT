@@ -1,5 +1,5 @@
 import React from 'react'
-import GameComments from './GameComments'
+
 
 const User = ({data}) => {
 	return (

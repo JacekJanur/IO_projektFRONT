@@ -11,8 +11,8 @@ const GameBlock = ({games}) => {
 	return (
 		
 		<div className="game-block">
-			<a href={"games/" + games.id}>
-				<img src={`${href}`}/>
+			<a href={"/games/" + games.id}>
+				<img alt="img" src={`${href}`}/>
 				<div className="tekst">
 					<div className="t">
 						<p className="game-name"> {games.name} </p>
