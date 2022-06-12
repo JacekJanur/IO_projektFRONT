@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './styles/normalize.css';
 import './styles/index.css';
-import './styles/game.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import LoginRoute from "./routes/LoginRoute";

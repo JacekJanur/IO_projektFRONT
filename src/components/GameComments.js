@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactStars from 'react-stars'
+
 
 const GameComments = ({data}) => {
 	return (

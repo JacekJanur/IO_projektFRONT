@@ -18,7 +18,7 @@ const UserProfile = () => {
 		    	const data = await fetch("https://jacekjanurbackend.azurewebsites.net/users/"+id)
 		    	const json = await data.json();
 	    		setUser(json);
-		      	 (json['id'] != undefined) ? setUserDownloaded(true) : setNoUser(true)
+		      	 (json['id'] != undefined) ? setUserDownloaded(true) : setNoUser(true) // eslint-disable-line
 			}
 			catch{
 				setNoUser(true)
@@ -26,7 +26,7 @@ const UserProfile = () => {
 		    
 		  }
 	  	fetchData()
-     }, []);
+     }, );
 
 
 	return (

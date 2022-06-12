@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import { useEffect } from 'react';
 import { useState } from 'react';
-import PropTypes from 'prop-types';
+
 
 const Navbar = () => {
     
@@ -14,10 +14,10 @@ const Navbar = () => {
         let ca = document.cookie.split(';');
         for(let i = 0; i < ca.length; i++) {
           let c = ca[i];
-          while (c.charAt(0) == ' ') {
+          while (c.charAt(0) == ' ') { // eslint-disable-line
             c = c.substring(1);
           }
-          if (c.indexOf(name) == 0) {
+          if (c.indexOf(name) == 0) { // eslint-disable-line
             return c.substring(name.length, c.length);
           }
         }
@@ -26,7 +26,11 @@ const Navbar = () => {
 
     function checkCookie() {
         let user = getCookie("token");
+<<<<<<< HEAD
         if (user != "") {
+=======
+        if (user != null) { // eslint-disable-line
+>>>>>>> d224bd41de81136ad215e134cab33bd53f66db31
             setLog(true);
 
         } else 
@@ -44,7 +48,7 @@ const Navbar = () => {
     useEffect(()=>{
         checkCookie();
         
-    }, [])
+    }, )
     
    
     const handleSubmit = () =>{
